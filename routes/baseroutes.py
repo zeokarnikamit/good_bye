@@ -11,6 +11,10 @@ app = Flask(__name__, template_folder='templates')
 def init():
     return render_template('tata.html')
 
+@app.route('/click_me')
+def click_me():
+    import pdb; pdb.set_trace()
+    return ''
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=9001, debug=True)

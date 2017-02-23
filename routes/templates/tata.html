@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <title>Bye Bye ZeOmega</title>
 </head>
-<body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope) {
+        $scope.name = 'Good Bye ZeOmega, Will miss you';
+    });
+</script>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+<div >
+    <p ng-bind="name"></p>
+    <button ng-click="localhost:9001/click_me" type="submit">Click Me</button>
+</div>
 
 </body>
 </html>
